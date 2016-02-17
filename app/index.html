@@ -52,6 +52,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
 
+  <link rel="import" href="styles/sky.html">
+
   <!-- Because this project uses vulcanize this should be your only html import
        in this file. All other imports should go in elements.html -->
   <link rel="import" href="elements/elements.html">
@@ -70,7 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Drawer Toolbar -->
         <paper-toolbar id="drawerToolbar">
-          <span class="menu-name">Menu</span>
+          <span class="menu-name">Navigation</span>
         </paper-toolbar>
 
         <!-- Drawer Content -->
@@ -80,9 +82,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Home</span>
           </a>
 
-          <a data-route="users" href="{{baseUrl}}users">
+          <a data-route="users" href="{{baseUrl}}education">
+            <iron-icon icon="assignment"></iron-icon>
+            <span>Education</span>
+          </a>
+
+          <a data-route="exams" href="{{baseUrl}}exams">
+            <iron-icon icon="bookmark"></iron-icon>
+            <span>Exams</span>
+          </a>
+
+          <a data-route="staff" href="{{baseUrl}}staff">
+            <iron-icon icon="accessibility"></iron-icon>
+            <span>Library</span>
+          </a>
+
+          <a data-route="yearly-reports" href="{{baseUrl}}yearly-reports">
             <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
+            <span>Yearly reports</span>
           </a>
 
           <a data-route="contact" href="{{baseUrl}}contact">
@@ -101,8 +118,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="space"></span>
 
           <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
           <paper-icon-button icon="search"></paper-icon-button>
+          <p>Login</p>
 
           <!-- Application name -->
           <div class="middle middle-container">
