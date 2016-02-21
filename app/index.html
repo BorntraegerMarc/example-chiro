@@ -117,16 +117,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!-- Toolbar icons -->
           <paper-icon-button icon="search"></paper-icon-button>
-          <a href="/"><p>Login</p></a>
+          <a href="/login" style="text-decoration: none; color:white">Login</a>
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">Swiss Chiropractic Acadamy</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">The Swiss Chiropractic Academy offers postgraduate education for chiropractic assistants and continuing education for licensed chiropractors.</div>
           </div>
         </paper-toolbar>
 
@@ -135,35 +135,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home">
               <paper-material elevation="1">
-                <my-greeting></my-greeting>
-
-                <p class="subhead">You now have:</p>
-                <my-list></my-list>
-
-                <p>Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
+                <p>ChiroSuisse beteiligt sich aktiv an der gesundheitspolitischen Diskussion. Hier finden Sie Medienmitteilungen von ChiroSuisse, Links zu spannenden TV-Sendungen rund um das Thema Chiropraktik, Pressespiegel und Stellungnahmen.</p>
               </paper-material>
 
               <paper-material elevation="1">
-                <p>This is another card.</p>
+                <h1 id="license">Mission Statement</h1>
+                <p>The mission of the Swiss Academy for Chiropractic is to improve patient care and treatment response by providing effective post-graduate and continuing education for chiropractors, facilitating life-long learning and enhancement of clinical competence.</p>
               </paper-material>
 
               <paper-material elevation="1">
-                <h1 id="license">License</h1>
-                <p>Everything in this repo is BSD style license unless otherwise specified.</p>
-                <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
-                <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
-                <ul>
-                <li>Redistributions of source code must retain the above copyright
-                notice, this list of conditions and the following disclaimer.</li>
-                <li>Redistributions in binary form must reproduce the above
-                copyright notice, this list of conditions and the following disclaimer
-                in the documentation and/or other materials provided with the
-                distribution.</li>
-                <li>Neither the name of Google Inc. nor the names of its
-                contributors may be used to endorse or promote products derived from
-                this software without specific prior written permission.</li>
-                </ul>
-                <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+                <h1>Education</h1>
+                <p>The new Swiss medical law MedBG/LPmed came into effect on September 1st, 2007. It regulates the chiropractic profession on a federal level. In Switzerland, chiropractic is a medical profession regulated on the same level as medical doctors, veterinarians, dentists, and pharmacists.</p>
+                <p>The postgraduate education program of the Swiss Chiropractic Academy prepares chiropractic postgraduates for life-long self-directed learning according to the principle of evidenced based medicine, analytical thinking and critical clinical decision making. The courses are held in English.</p>
+              </paper-material>
+
+              <paper-material elevation="1">
+                <h1>Exams</h1>
+                <p>Here you find all the necessary information and the registration forms for the federal examination, the radioprotection examination and the postgraduate examination.</p>
+              </paper-material>
+
+              <paper-material elevation="1">
+                <h1>Library</h1>
+                <p>The library of the Swiss Chiropractic Academy contains about one thousand media: about 850 books, cassettes, videocassettes, CDs and journals. There are also articles and assignments from previous assistants. The journals, the articles and the assignments are not lent, but one may copy articles.</p>
               </paper-material>
             </section>
 
@@ -175,6 +168,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <a href$="{{baseUrl}}users/Rob">Rob</a><br>
                 <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
                 <a href$="{{baseUrl}}users/Sam">Sam</a>
+              </paper-material>
+            </section>
+
+            <section data-route="login">
+              <paper-material elevation="1">
+                <h2 class="page-title">Login</h2>
               </paper-material>
             </section>
 
