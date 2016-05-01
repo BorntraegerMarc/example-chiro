@@ -61,167 +61,254 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 
 <body unresolved>
-  <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
+  <paper-drawer-panel id="paperDrawerPanel">
+    <!-- Drawer Scroll Header Panel -->
+    <paper-scroll-header-panel drawer fixed>
 
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="menu-name">Navigation</span>
-        </paper-toolbar>
+      <!-- Drawer Toolbar -->
+      <paper-toolbar id="drawerToolbar">
+        <span class="menu-name">Navigation</span>
+      </paper-toolbar>
 
-        <!-- Drawer Content -->
-        <paper-menu attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="{{baseUrl}}">
-            <iron-icon icon="home"></iron-icon>
-            <span>Home</span>
-          </a>
+      <!-- Drawer Content -->
+      <paper-menu attr-for-selected="data-route" selected="[[route]]">
+        <a data-route="home" href="{{baseUrl}}">
+          <iron-icon icon="home"></iron-icon>
+          <span>Home</span>
+        </a>
 
-          <a data-route="users" href="{{baseUrl}}education">
-            <iron-icon icon="assignment"></iron-icon>
-            <span>Education</span>
-          </a>
+        <a data-route="portfolios" href="{{baseUrl}}portfolios">
+          <iron-icon icon="accessibility"></iron-icon>
+          <span>Portfolios</span>
+        </a>
 
-          <a data-route="exams" href="{{baseUrl}}exams">
-            <iron-icon icon="bookmark"></iron-icon>
-            <span>Exams</span>
-          </a>
+        <a data-route="users" href="{{baseUrl}}education">
+          <iron-icon icon="assignment"></iron-icon>
+          <span>Education</span>
+        </a>
 
-          <a data-route="staff" href="{{baseUrl}}staff">
-            <iron-icon icon="accessibility"></iron-icon>
-            <span>Library</span>
-          </a>
+        <a data-route="exams" href="{{baseUrl}}exams">
+          <iron-icon icon="bookmark"></iron-icon>
+          <span>Exams</span>
+        </a>
 
-          <a data-route="yearly-reports" href="{{baseUrl}}yearly-reports">
-            <iron-icon icon="info"></iron-icon>
-            <span>Yearly reports</span>
-          </a>
+        <a data-route="staff" href="{{baseUrl}}staff">
+          <iron-icon icon="accessibility"></iron-icon>
+          <span>Library</span>
+        </a>
 
-          <a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
-          </a>
-        </paper-menu>
-      </paper-scroll-header-panel>
+        <a data-route="yearly-reports" href="{{baseUrl}}yearly-reports">
+          <iron-icon icon="info"></iron-icon>
+          <span>Yearly reports</span>
+        </a>
 
-      <!-- Main Area -->
-      <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
-        <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+        <a data-route="contact" href="{{baseUrl}}contact">
+          <iron-icon icon="mail"></iron-icon>
+          <span>Contact</span>
+        </a>
+      </paper-menu>
+    </paper-scroll-header-panel>
 
-          <span class="space"></span>
+    <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
 
-          <!-- Toolbar icons -->
-          <paper-icon-button icon="search"></paper-icon-button>
-          <a href="/login" style="text-decoration: none; color:white">Login</a>
+        <span class="space"></span>
 
-          <!-- Application name -->
-          <div class="middle middle-container">
-            <div class="app-name">Swiss Chiropractic Acadamy</div>
-          </div>
+        <!-- Toolbar icons -->
+        <paper-icon-button icon="search"></paper-icon-button>
+        <a href="/login" style="text-decoration: none; color:white">Login</a>
 
-          <!-- Application sub title -->
-          <div class="bottom bottom-container">
-            <div class="bottom-title">The Swiss Chiropractic Academy offers postgraduate education for chiropractic assistants and continuing education for licensed chiropractors.</div>
-          </div>
-        </paper-toolbar>
-
-        <!-- Main Content -->
-        <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            <section data-route="home">
-              <paper-material elevation="1">
-                <p>ChiroSuisse beteiligt sich aktiv an der gesundheitspolitischen Diskussion. Hier finden Sie Medienmitteilungen von ChiroSuisse, Links zu spannenden TV-Sendungen rund um das Thema Chiropraktik, Pressespiegel und Stellungnahmen.</p>
-              </paper-material>
-
-              <paper-material elevation="1">
-                <h1 id="license">Mission Statement</h1>
-                <p>The mission of the Swiss Academy for Chiropractic is to improve patient care and treatment response by providing effective post-graduate and continuing education for chiropractors, facilitating life-long learning and enhancement of clinical competence.</p>
-              </paper-material>
-
-              <paper-material elevation="1">
-                <h1>Education</h1>
-                <p>The new Swiss medical law MedBG/LPmed came into effect on September 1st, 2007. It regulates the chiropractic profession on a federal level. In Switzerland, chiropractic is a medical profession regulated on the same level as medical doctors, veterinarians, dentists, and pharmacists.</p>
-                <p>The postgraduate education program of the Swiss Chiropractic Academy prepares chiropractic postgraduates for life-long self-directed learning according to the principle of evidenced based medicine, analytical thinking and critical clinical decision making. The courses are held in English.</p>
-              </paper-material>
-
-              <paper-material elevation="1">
-                <h1>Exams</h1>
-                <p>Here you find all the necessary information and the registration forms for the federal examination, the radioprotection examination and the postgraduate examination.</p>
-              </paper-material>
-
-              <paper-material elevation="1">
-                <h1>Library</h1>
-                <p>The library of the Swiss Chiropractic Academy contains about one thousand media: about 850 books, cassettes, videocassettes, CDs and journals. There are also articles and assignments from previous assistants. The journals, the articles and the assignments are not lent, but one may copy articles.</p>
-              </paper-material>
-            </section>
-
-            <section data-route="users">
-              <paper-material elevation="1">
-                <h2 class="page-title">Users</h2>
-                <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
-              </paper-material>
-            </section>
-
-            <section data-route="login">
-              <paper-material elevation="1">
-                <h2 class="page-title">Login</h2>
-              </paper-material>
-            </section>
-
-            <section data-route="user-info">
-              <paper-material elevation="1">
-                <h2 class="page-title">User: {{params.name}}</h2>
-                <div>This is {{params.name}}'s section</div>
-              </paper-material>
-            </section>
-
-            <section data-route="contact">
-              <paper-material elevation="1">
-                <h2 class="page-title">Contact</h2>
-                <p>This is the contact section</p>
-              </paper-material>
-            </section>
-          </iron-pages>
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">Swiss Chiropractic Acadamy</div>
         </div>
-      </paper-scroll-header-panel>
-    </paper-drawer-panel>
 
-    <paper-toast id="toast">
-      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
-    </paper-toast>
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <div class="bottom-title">The Swiss Chiropractic Academy offers postgraduate education for chiropractic
+            assistants and continuing education for licensed chiropractors.
+          </div>
+        </div>
+      </paper-toolbar>
 
-    <!-- Uncomment next block to enable Service Worker support (1/2) -->
-    <!--
-    <paper-toast id="caching-complete"
-                 duration="6000"
-                 text="Caching complete! This app will work offline.">
-    </paper-toast>
+      <!-- Main Content -->
+      <div class="content">
+        <iron-pages attr-for-selected="data-route" selected="{{route}}">
+          <section data-route="home">
+            <paper-material elevation="1">
+              <p>ChiroSuisse beteiligt sich aktiv an der gesundheitspolitischen Diskussion. Hier finden Sie
+                Medienmitteilungen von ChiroSuisse, Links zu spannenden TV-Sendungen rund um das Thema Chiropraktik,
+                Pressespiegel und Stellungnahmen.</p>
+            </paper-material>
 
-    <platinum-sw-register auto-register
-                          clients-claim
-                          skip-waiting
-                          base-uri="bower_components/platinum-sw/bootstrap"
-                          on-service-worker-installed="displayInstalledToast">
-      <platinum-sw-cache default-cache-strategy="fastest"
-                         cache-config-file="cache-config.json">
-      </platinum-sw-cache>
-    </platinum-sw-register>
-    -->
+            <paper-material elevation="1">
+              <h1 id="license">Mission Statement</h1>
+              <p>The mission of the Swiss Academy for Chiropractic is to improve patient care and treatment response by
+                providing effective post-graduate and continuing education for chiropractors, facilitating life-long
+                learning and enhancement of clinical competence.</p>
+            </paper-material>
 
-  </template>
+            <paper-material elevation="1">
+              <h1>Education</h1>
+              <p>The new Swiss medical law MedBG/LPmed came into effect on September 1st, 2007. It regulates the
+                chiropractic profession on a federal level. In Switzerland, chiropractic is a medical profession
+                regulated on the same level as medical doctors, veterinarians, dentists, and pharmacists.</p>
+              <p>The postgraduate education program of the Swiss Chiropractic Academy prepares chiropractic
+                postgraduates for life-long self-directed learning according to the principle of evidenced based
+                medicine, analytical thinking and critical clinical decision making. The courses are held in
+                English.</p>
+            </paper-material>
 
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <!-- endbuild-->
+            <paper-material elevation="1">
+              <h1>Exams</h1>
+              <p>Here you find all the necessary information and the registration forms for the federal examination, the
+                radioprotection examination and the postgraduate examination.</p>
+            </paper-material>
+
+            <paper-material elevation="1">
+              <h1>Library</h1>
+              <p>The library of the Swiss Chiropractic Academy contains about one thousand media: about 850 books,
+                cassettes, videocassettes, CDs and journals. There are also articles and assignments from previous
+                assistants. The journals, the articles and the assignments are not lent, but one may copy articles.</p>
+            </paper-material>
+          </section>
+
+          <section data-route="portfolios">
+            <style is="custom-style">
+              iron-list {
+                padding-bottom: 16px;
+              }
+
+              .item {
+                @apply(--layout-horizontal);
+                margin: 16px 16px 0 16px;
+                padding: 20px;
+                border-radius: 8px;
+                background-color: white;
+                border: 1px solid #ddd;
+              }
+
+              .item:focus {
+                outline: 0;
+                border-color: #666;
+              }
+
+              .pad {
+                padding: 0 16px;
+                @apply(--layout-flex);
+                @apply(--layout-vertical);
+              }
+
+              .primary {
+                font-size: 16px;
+                font-weight: bold;
+              }
+
+              .secondary {
+                font-size: 14px;
+              }
+
+              .dim {
+                color: gray;
+              }
+
+              input[type=radio], div.toggleApplication {
+                display: none;
+              }
+
+              input[type=radio]:checked + div.toggleApplication {
+                display: block;
+              }
+            </style>
+
+            <my-initializer foo="{{data}}"></my-initializer>
+
+            <template is="dom-repeat" items="{{data}}">
+              <div>
+                <div class="item">
+                  <div class="pad">
+                    <div class="primary">[[item.firstName]] [[item.lastName]]</div>
+                    <div class="secondary">
+                      <i>E-Mail: </i>[[item.email]]
+                      <a href="/contact">
+                        <paper-button raised style="float: right;">Edit</paper-button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+
+          </section>
+
+          <section data-route="users">
+            <paper-material elevation="1">
+              <h2 class="page-title">Users</h2>
+              <p>This is the users section</p>
+              <a href$="{{baseUrl}}users/Addy">Addy</a><br>
+              <a href$="{{baseUrl}}users/Rob">Rob</a><br>
+              <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
+              <a href$="{{baseUrl}}users/Sam">Sam</a>
+            </paper-material>
+          </section>
+
+          <section data-route="login">
+            <paper-material elevation="1">
+              <h2 class="page-title">Login</h2>
+            </paper-material>
+          </section>
+
+          <section data-route="user-info">
+            <paper-material elevation="1">
+              <h2 class="page-title">User: {{params.name}}</h2>
+              <div>This is {{params.name}}'s section</div>
+            </paper-material>
+          </section>
+
+          <section data-route="contact">
+            <paper-material elevation="1">
+              <h2 class="page-title">Contact</h2>
+              <p>This is the contact section</p>
+            </paper-material>
+          </section>
+        </iron-pages>
+      </div>
+    </paper-scroll-header-panel>
+  </paper-drawer-panel>
+
+  <paper-toast id="toast">
+    <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+  </paper-toast>
+
+  <!-- Uncomment next block to enable Service Worker support (1/2) -->
+  <!--
+  <paper-toast id="caching-complete"
+               duration="6000"
+               text="Caching complete! This app will work offline.">
+  </paper-toast>
+
+  <platinum-sw-register auto-register
+                        clients-claim
+                        skip-waiting
+                        base-uri="bower_components/platinum-sw/bootstrap"
+                        on-service-worker-installed="displayInstalledToast">
+    <platinum-sw-cache default-cache-strategy="fastest"
+                       cache-config-file="cache-config.json">
+    </platinum-sw-cache>
+  </platinum-sw-register>
+  -->
+
+</template>
+
+<!-- build:js scripts/app.js -->
+<script src="scripts/app.js"></script>
+<!-- endbuild-->
 </body>
 
 </html>
