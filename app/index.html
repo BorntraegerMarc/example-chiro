@@ -236,7 +236,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <div class="primary">[[item.firstName]] [[item.lastName]]</div>
                     <div class="secondary">
                       <i>E-Mail: </i>[[item.email]]
-                      <a href="/contact">
+                      <a href="/edit-portfolio">
                         <paper-button raised style="float: right;">Edit</paper-button>
                       </a>
                     </div>
@@ -244,7 +244,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </div>
             </template>
+          </section>
 
+          <section data-route="edit-portfolio">
+            <paper-material elevation="1">
+              <input-fields></input-fields>
+            </paper-material>
           </section>
 
           <section data-route="users">

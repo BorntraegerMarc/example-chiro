@@ -1,0 +1,110 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="../../bower_components/paper-time-picker/paper-time-picker.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
+
+<dom-module id="input-fields">
+  <template>
+    <style is="custom-style" include="paper-time-picker-dialog-style">
+      :host {
+        display: block;
+      }
+
+      #toast {
+        --paper-toast-background-color: green;
+        --paper-toast-color: white;
+      }
+    </style>
+
+    <paper-toast id="toast" text="Changes saved"></paper-toast>
+
+    <div>
+      <paper-input name="firstName" id="firstName" type="text" label="First name" value="Marc"
+                   on-change="handleChangeFirst" required style="width: 95%; float: left;"></paper-input>
+      <span style="width: 5%; float: right; margin-top: 20px;">
+        <paper-spinner id="spinnerFirstName"></paper-spinner>
+      </span>
+    </div>
+
+    <div>
+      <paper-input name="lastName" id="lastName" type="text" label="Last name" value="Bornträger"
+                   on-change="handleChangeLast" required style="width: 95%; float: left;"></paper-input>
+      <span style="width: 5%; float: right; margin-top: 20px;">
+        <paper-spinner id="spinnerLast"></paper-spinner>
+      </span>
+    </div>
+
+    <paper-dropdown-menu label="Title">
+      <paper-listbox class="dropdown-content" selected="1">
+        <paper-item>None</paper-item>
+        <paper-item>Chriopraktor</paper-item>
+        <paper-item>Fachchiropraktor</paper-item>
+        <paper-item>Physician</paper-item>
+        <paper-item>Physiotherapist</paper-item>
+        <paper-item>Student</paper-item>
+        <paper-item>Assistant</paper-item>
+        <paper-item>Other</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
+
+    <div>
+      <span>Time: {{time}}</span>
+      <paper-button raised on-click="openDialog">Change time</paper-button>
+    </div>
+
+    <paper-dialog id="dialog" modal class="paper-time-picker-dialog"
+                  on-iron-overlay-closed="dismissDialog">
+      <paper-time-picker id="timePicker" time="{{time}}"></paper-time-picker>
+      <div class="buttons">
+        <paper-button dialog-dismiss>Cancel</paper-button>
+        <paper-button dialog-confirm>OK</paper-button>
+      </div>
+    </paper-dialog>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'input-fields',
+
+        openDialog: function () {
+          this.$.dialog.open();
+        },
+
+        handleChangeFirst: function () {
+          this.handleChange('spinnerFirstName');
+        },
+
+        handleChangeLast: function () {
+          this.handleChange('spinnerLast');
+        },
+
+        handleChange: function (name) {
+          this.$[name].active = true;
+          var self = this;
+          setTimeout(function () {
+            self.$[name].active = false;
+            self.$.toast.open();
+          }, 1500)
+        }
+      });
+    })();
+  </script>
+</dom-module>
